@@ -2,45 +2,45 @@ package swmaestro.revivers.cashface.interfaces;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import swmaestro.revivers.cashface.application.UserService;
 import swmaestro.revivers.cashface.domain.User;
 import swmaestro.revivers.cashface.utils.JwtUtil;
 
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.sql.Date;
+import java.time.LocalDate;
+import java.util.HashMap;
+import java.util.Map;
 
 @RestController
 public class UserController {
 
     @Autowired
-    private JwtUtil jwtUtil;
-
-    @Autowired
     private UserService userService;
 
-    @PostMapping("/user/account/signup")
+    @PostMapping("/users/account/signup")
     public ResponseEntity<?> create(
             @RequestBody User resource
     ) throws URISyntaxException {
+        resource.setTotalPoints(0);
+        resource.setCreatedDate( Date.valueOf(LocalDate.now()) );
+
         User user = userService.registerUser(resource);
 
         String url = "/users/account/" + user.getId();
         return ResponseEntity.created(new URI(url)).body("{}");
     }
 
-    @PostMapping("/user/account/auth")
-    public ResponseEntity<SessionResponseDto> create(
-            @RequestBody SessionRequestDto resource
+    @GetMapping("/users/{userId}/totalPoints")
+    public Map<String, String> getTotalPoints(
+            @PathVariable("userId") Integer userId
     ) {
+        HashMap<String, String> jsonResult = new HashMap<>();
+        jsonResult.put("points", Integer.toString(userService.getPointsById(userId)));
 
-        String email = resource.getEmail();
-        String password = resource.getPassword();
-
-        User user = userService.authenticate(email, password);
-
+        return jsonResult;
     }
 
 }

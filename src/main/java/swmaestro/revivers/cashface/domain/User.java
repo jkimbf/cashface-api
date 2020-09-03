@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import java.sql.Date;
 
 @Entity
 @Getter
@@ -53,12 +54,9 @@ public class User {
     private String nationality;
 
     @Setter
-    @NotNull
     private Integer totalPoints;
 
     @Setter
-    @NotEmpty
-    @NotNull
-    private String createdDate;
+    private Date createdDate;
 
 }

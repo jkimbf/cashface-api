@@ -15,7 +15,7 @@ public class JwtUtil {
         this.key = Keys.hmacShaKeyFor(secret.getBytes());
     }
 
-    public String createToken(long userId, String name, Long restaurantId) {
+    public String createToken(long userId, String name) {
 
         // 1 letter = 8 bits, at least 256 bits = 32 letters
         //String secret = "12345678901234567890123456789012";
@@ -24,10 +24,6 @@ public class JwtUtil {
         JwtBuilder builder = Jwts.builder()
                 .claim("userId", userId)
                 .claim("name", name);
-
-        if (restaurantId != null) {
-            builder = builder.claim("restaurantId", restaurantId);
-        }
 
         String token = builder
                 .signWith(key, SignatureAlgorithm.HS256)
