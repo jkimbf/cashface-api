@@ -33,11 +33,11 @@ public class UserController {
     }
 
     @GetMapping("/users/{userId}/totalPoints")
-    public Map<String, String> getTotalPoints(
+    public Map<String, Integer> getTotalPoints(
             @PathVariable("userId") Integer userId
     ) {
-        HashMap<String, String> jsonResult = new HashMap<>();
-        jsonResult.put("points", Integer.toString(userService.getPointsById(userId)));
+        HashMap<String, Integer> jsonResult = new HashMap<>();
+        jsonResult.put("points", userService.getPointsById(userId));
 
         return jsonResult;
     }

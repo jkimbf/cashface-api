@@ -9,7 +9,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/test?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul
     username: root
-    password: flqkdlqjtmxortl
+    password: wogurwoals79
   jpa:
     hibernate:
       ddl-auto: update
