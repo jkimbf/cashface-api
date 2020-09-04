@@ -5,7 +5,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import swmaestro.revivers.cashface.application.UserService;
 import swmaestro.revivers.cashface.domain.User;
-import swmaestro.revivers.cashface.utils.JwtUtil;
 
 import java.net.URI;
 import java.net.URISyntaxException;
