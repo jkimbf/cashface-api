@@ -48,8 +48,18 @@ test {
 
 jar {
 	enabled = true
+	manifest {
+		attributes(
+				'Main-Class': 'swmaestro.revivers.cashface.CashfaceApplication'
+		)
+	}
+	/*from {
+		configurations.compileClasspath.filter{ it.exists() }.collect { it.isDirectory() ? it : zipTree(it) }
+	}*/
 }
 
 bootJar {
 	enabled = false
 }
+
+

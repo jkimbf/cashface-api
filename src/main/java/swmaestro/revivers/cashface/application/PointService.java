@@ -36,7 +36,7 @@ public class PointService {
                     .orElseThrow(() -> new UserIdNotExistedException(resource.getUserId()));
 
             if (user.getTotalPoints() + resource.getAmount() < 0) {
-                throw new InsufficientBalanceException(user.getTotalPoints(), resource.getAmount());
+                throw new InsufficientBalanceException();
             }
         }
 
