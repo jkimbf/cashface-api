@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="swmaestro.revivers.cashface.interfaces.PointControllerTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-09-08T16:44:17" hostname="MacBook-Pro-2.local" time="0.097">
+  <properties/>
+  <testcase name="create()" classname="swmaestro.revivers.cashface.interfaces.PointControllerTests" time="0.05"/>
+  <testcase name="list()" classname="swmaestro.revivers.cashface.interfaces.PointControllerTests" time="0.043"/>
+  <system-out><![CDATA[2020-09-09 01:44:16.746  INFO 78598 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [swmaestro.revivers.cashface.interfaces.PointControllerTests], using SpringBootContextLoader
+2020-09-09 01:44:16.747  INFO 78598 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [swmaestro.revivers.cashface.interfaces.PointControllerTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-09-09 01:44:16.747  INFO 78598 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [swmaestro.revivers.cashface.interfaces.PointControllerTests]: PointControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-09-09 01:44:16.754  INFO 78598 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration swmaestro.revivers.cashface.CashfaceApplication for test class swmaestro.revivers.cashface.interfaces.PointControllerTests
+2020-09-09 01:44:16.756  INFO 78598 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-09-09 01:44:16.756  INFO 78598 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7929e621, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3c870cde, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@71561c9a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@761aa63c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@40b44e30, org.springframework.test.context.transaction.TransactionalTestExecutionListener@44515b04, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5a22dd8, org.springframework.test.context.event.EventPublishingTestExecutionListener@26aa4016, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@448d4f3d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@acaa5d3, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1e1285bf, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6accdc9b, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@44968258, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1b2d4324]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.3.3.RELEASE)
+
+2020-09-09 01:44:16.785  INFO 78598 --- [    Test worker] s.r.c.interfaces.PointControllerTests    : Starting PointControllerTests on MacBook-Pro-2.local with PID 78598 (started by stevejaehyeokkim in /Users/stevejaehyeokkim/Desktop/Workspace/java-spring/cashface-api)
+2020-09-09 01:44:16.785  INFO 78598 --- [    Test worker] s.r.c.interfaces.PointControllerTests    : The following profiles are active: test
+2020-09-09 01:44:17.083  INFO 78598 --- [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 5eb1a2fd-1fd5-4c1f-b642-0d51da0bfc15
+
+2020-09-09 01:44:17.139  INFO 78598 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@53193c2a, org.springframework.security.web.context.SecurityContextPersistenceFilter@7f5235f0, org.springframework.security.web.header.HeaderWriterFilter@1a00744f, org.springframework.security.web.authentication.logout.LogoutFilter@6db31389, swmaestro.revivers.cashface.filters.JwtAuthenticationFilter@298dbe33, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@33e1aea3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2a5a069c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@28714db1, org.springframework.security.web.session.SessionManagementFilter@6c08ab74, org.springframework.security.web.access.ExceptionTranslationFilter@6325eb42]
+2020-09-09 01:44:17.277  INFO 78598 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-09 01:44:17.394  INFO 78598 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-09-09 01:44:17.394  INFO 78598 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-09-09 01:44:17.401  INFO 78598 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 6 ms
+2020-09-09 01:44:17.411  INFO 78598 --- [    Test worker] s.r.c.interfaces.PointControllerTests    : Started PointControllerTests in 0.652 seconds (JVM running for 8.554)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
