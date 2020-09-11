@@ -26,11 +26,13 @@ public class Point {
 
     @Setter
     @NotNull
+    @NotEmpty
     private String adsType;
 
     @Setter
     @NotNull
-    private Integer transactionType;
+    @NotEmpty
+    private String transactionType;
 
     @Setter
     @NotNull
