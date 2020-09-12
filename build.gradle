@@ -32,8 +32,6 @@ dependencies {
 	runtime 'io.jsonwebtoken:jjwt-impl:0.10.7'
 	runtime 'io.jsonwebtoken:jjwt-jackson:0.10.7'
 
-	compile group: 'org.jasypt', name: 'jasypt', version: '1.9.2'
-
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 

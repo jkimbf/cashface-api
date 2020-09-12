@@ -1,29 +1,14 @@
-#spring:
-#  datasource:
-#    url: jdbc:h2:~/data/cashface-api
-#  jpa:
-#    hibernate:
-#      ddl-auto: update
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/test?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul
     username: root
-    password: ENC(d9JvBbL6cl76Ixs6JmGoeC9cfu098oIY)
+    password: wogurwoals79
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
 
 jwt:
-  secret: 12345678901234567890123456789012
+  secret: flqkdlqjtmrlagyflsrlawogurqkrxogud
 
-jasypt:
-  encryptor:
-    password: reviversCashface
-#---
-
-#spring:
-#  profiles: test
-#  datasource:
-#    url: jdbc:h2:mem:test
