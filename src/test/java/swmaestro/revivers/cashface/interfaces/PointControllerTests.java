@@ -42,14 +42,14 @@ class PointControllerTests {
         points.add(Point.builder()
                 .userId(1004)
                 .adsType("Google Ads")
-                .transactionType(0)
+                .transactionType("Reward")
                 .amount(10)
                 .build()
         );
         points.add(Point.builder()
                 .userId(1004)
                 .adsType("Kakao Ads")
-                .transactionType(0)
+                .transactionType("Reward")
                 .amount(12)
                 .build()
         );
@@ -59,10 +59,10 @@ class PointControllerTests {
         mvc.perform(get("/users/1004/pointsHistory"))
                 .andExpect(status().isOk())
                 .andExpect(content().string(containsString(
-                        "\"userId\":1004,\"adsType\":\"Google Ads\",\"transactionType\":0,\"amount\":10"
+                        "\"userId\":1004,\"adsType\":\"Google Ads\",\"transactionType\":\"Reward\",\"amount\":10"
                 )))
                 .andExpect(content().string(containsString(
-                        "\"userId\":1004,\"adsType\":\"Kakao Ads\",\"transactionType\":0,\"amount\":12"
+                        "\"userId\":1004,\"adsType\":\"Kakao Ads\",\"transactionType\":\"Reward\",\"amount\":12"
                 )));
     }
 
@@ -71,7 +71,7 @@ class PointControllerTests {
         Point point = Point.builder()
                 .userId(1004)
                 .adsType("Kakao Ads")
-                .transactionType(0)
+                .transactionType("적립")
                 .amount(10)
                 .build();
 

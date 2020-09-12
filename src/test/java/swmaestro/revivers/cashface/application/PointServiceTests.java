@@ -40,14 +40,14 @@ class PointServiceTests {
         mockPoints.add(Point.builder()
                 .userId(1004)
                 .adsType("Google Ads")
-                .transactionType(0)
+                .transactionType("적립")
                 .amount(10)
                 .build()
         );
         mockPoints.add(Point.builder()
                 .userId(1004)
                 .adsType("Kakao Ads")
-                .transactionType(0)
+                .transactionType("적립")
                 .amount(13)
                 .build()
         );
@@ -67,7 +67,7 @@ class PointServiceTests {
         Point mockPoint = Point.builder()
                 .userId(1004)
                 .adsType("Google Ads")
-                .transactionType(0)
+                .transactionType("적립")
                 .amount(10)
                 .build();
 
@@ -87,8 +87,8 @@ class PointServiceTests {
 
         Point point = Point.builder()
                 .userId(1004)
-                .adsType("환급")
-                .transactionType(0)
+                .adsType("-")
+                .transactionType("환급")
                 .amount(-99999)
                 .build();
 

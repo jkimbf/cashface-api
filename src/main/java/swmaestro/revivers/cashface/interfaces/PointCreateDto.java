@@ -8,4 +8,5 @@ public class PointCreateDto {
     private Integer adsType;
 
     private Integer pointType;
+
 }
