@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="swmaestro.revivers.cashface.application.PointServiceTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-09-12T14:17:39" hostname="MacBook-Pro-2.local" time="0.023">
+<testsuite name="swmaestro.revivers.cashface.application.PointServiceTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-09-12T15:15:39" hostname="MacBook-Pro-2.local" time="0.019">
   <properties/>
-  <testcase name="registerPointWithValidAmount()" classname="swmaestro.revivers.cashface.application.PointServiceTests" time="0.02"/>
+  <testcase name="registerPointWithValidAmount()" classname="swmaestro.revivers.cashface.application.PointServiceTests" time="0.016"/>
   <testcase name="getPointsByUserId()" classname="swmaestro.revivers.cashface.application.PointServiceTests" time="0.001"/>
-  <testcase name="registerPointWithInvalidAmount()" classname="swmaestro.revivers.cashface.application.PointServiceTests" time="0.001"/>
+  <testcase name="registerPointWithInvalidAmount()" classname="swmaestro.revivers.cashface.application.PointServiceTests" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
